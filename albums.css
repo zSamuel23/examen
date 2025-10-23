@@ -238,3 +238,56 @@ nav a {
 .toast.error {
   background: #dc3545;
 }
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    border: 5px;
+    border-color: #fff;
+     border-top: 1px solid #333;
+}
+
+#contenedor1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#contenedor2,
+#contenedor3,
+#contenedor4 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#contenedor3 pre {
+    text-align: left;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+#contenedor4 {
+  display: flex;
+  justify-content: flex-end; 
+  padding-right: 20px; 
+}
+
+#contenedor4 ul {
+  display: flex;
+  gap: 15px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contenedor4 ul li img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}

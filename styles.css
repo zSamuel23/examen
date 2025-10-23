@@ -1,29 +1,23 @@
+/* --- ESTRUCTURA GENERAL --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 
 body {
   background-color: #000;
   color: white;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 
-
+/* --- HEADER --- */
 header {
   position: relative;
   padding: 20px 0;
-}
-
-.top-icons {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  gap: 20px;
-}
-
-.top-icons img {
-  width: 40px;
 }
 
 .main-title {
@@ -46,7 +40,7 @@ header {
   cursor: pointer;
 }
 
-
+/* --- NAV --- */
 nav {
   margin: 20px 0;
   display: flex;
@@ -63,18 +57,28 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
   color: #ffffff;
-  outline: none;
   text-decoration: underline;
 }
 
-.ImgCarru {
-  width: 750px;
-  height: 750px;
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+  flex: 1; /* Esto empuja el footer hacia abajo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
-/* === MODAL CARRITO === */
+
+.ImgCarru {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* --- MODAL CARRITO --- */
 .modal-carrito {
   display: none;
   position: fixed;
@@ -95,7 +99,6 @@ nav a:focus {
   border-radius: 15px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   text-align: center;
   position: relative;
 }
@@ -109,19 +112,59 @@ nav a:focus {
   color: #fff;
 }
 
-/* LISTA DE PRODUCTOS */
-#lista-carrito {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+/* --- FOOTER --- */
+footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 1px solid #333;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
 }
 
-#lista-carrito li {
-  background: #222;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
+#contenedor1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+#contenedor3 p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#contenedor4 ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contenedor4 ul li img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#contenedor4 ul li img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  #contenedor1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  #contenedor4 ul {
+    justify-content: center;
+  }
 }

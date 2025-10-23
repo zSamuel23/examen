@@ -235,3 +235,58 @@ button {
 .toast.error {
   background: #dc3545;
 }
+footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 1px solid #333;
+  padding: 20px 0;
+  width: 100%;
+}
+
+#contenedor1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+#contenedor3 p {
+  margin: 0;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+#contenedor4 ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contenedor4 ul li a img {
+  height: 35px;
+  width: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#contenedor4 ul li a img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Responsive (para pantallas pequeñas) */
+@media (max-width: 600px) {
+  #contenedor1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  #contenedor4 ul {
+    justify-content: center;
+  }
+}
